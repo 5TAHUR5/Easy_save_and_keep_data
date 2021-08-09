@@ -5,6 +5,16 @@ This class stores and takes data from the path you choose/Этот класс с
 <a id="en"></a>
 #### sorry, but there is no English translation yet
 <a id="ru"></a>
+### Краткое описание  
+конструктор данного класса выглядит как  
+~~~java
+Serializer<T> serializer = new Serializer<>(String path, T defaultObject, Serializer.TypePath typeParh)
+~~~  
+String path отвечает за путь на ПК/ключ для Preferences/путь в .jar файле 
+
+T defaultObject не обязателен, он используется если нужный файл/ключ не найден и возвращается вместо него (если defaultObject не указан то возвращается null), чтобы программа не закрылась.  
+
+Serializer.TypePath typeParh указывает тип хранения (Preferences / файл на ПК/ файл в .jar файле). Все они расписаны ниже
 ### Serializer.TypePath.PREFERENCES
 Подойдёт для настроек (логин и пароль от БД), игровых сохранений (деньги, уровень, профиль) и т.д.
 ~~~java
