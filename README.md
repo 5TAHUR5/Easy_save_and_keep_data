@@ -34,7 +34,7 @@ System.out.println(serializer.deserializeData());//взятие
 >abracadabra
 
 
-Также у него есть то что мне очень нравится. А именно дэфолтный объект. Если его не указывать то он будет равен null
+Проверка дэфолтного объекта: 
 ~~~java
 //создание сериалайзера где дефолтным объектом является второй аргумент конструктора 
 Serializer<String> serializer = new Serializer<>("value2", "DEFAULT", Serializer.TypePath.PREFERENCES);
@@ -57,7 +57,7 @@ System.out.println(serializer.deserializeData());
 >[0, 1, 3]
 
 Пример с профилем:
-~~~
+~~~java
 public class Main {
     static class Profile{//класс профиля написанный на коленке
         private int money = 10;//деньги
@@ -103,4 +103,4 @@ System.out.println(serializer.deserializeData());
 как видим папка game создалась автоматически  
 ### Serializer.TypePath.IN_JAR
 Он подойдёт только для того чтобы брать изображения (BufferedImage) из jar файла. Чтобы поместить изображения в jar файл достаточно поместить его в папку src (если вы работаете в IDEA, иначе смотрите [тут](https://coderoad.ru/1096398/%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-JAR-Java)). Пример:  
-![in_jar](in_jar.png) пути
+![in_jar](in_jar.png)
